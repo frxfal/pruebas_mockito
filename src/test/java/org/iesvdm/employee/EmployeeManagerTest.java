@@ -8,12 +8,10 @@ import static org.mockito.Mockito.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.ArgumentCaptor;
-import org.mockito.Captor;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-import org.mockito.Spy;
+import org.mockito.*;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class EmployeeManagerTest {
 
@@ -57,6 +55,10 @@ public class EmployeeManagerTest {
 	@Test
 	public void testPayEmployeesReturnZeroWhenNoEmployeesArePresent() {
 
+		Mockito.when(employeeRepository.findAll()).thenReturn(new ArrayList<>());
+
+		assertThat(employeeManager.payEmployees()).isEqualTo(0);
+
 	}
 
 	/**
@@ -71,6 +73,13 @@ public class EmployeeManagerTest {
 	 */
 	@Test
 	public void testPayEmployeesReturnOneWhenOneEmployeeIsPresentAndBankServicePayPaysThatEmployee() {
+
+		Mockito.when(employeeRepository.findAll()).thenReturn(Arrays.asList(new Employee("1", 1000.0d)));
+
+		assertThat(employeeManager.payEmployees()).isEqualTo(1);
+
+		verify(bankService, times(1)).pay("1", 1000.0d);
+		verifyNoMoreInteractions(bankService);
 
 	}
 
