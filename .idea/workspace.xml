@@ -10,7 +10,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5c399beb-7381-4adb-ab43-564baa14b56b" name="Changes" comment="Actualizaciones a la teoría de mockito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/employee/EmployeeInMemoryRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/employee/EmployeeInMemoryRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/employee/EmployeeManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/employee/EmployeeManagerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,28 +39,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/usuario/IdeaProjects/proyecto_mockito/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.EmployeeInMemoryRepositoryTest.executor": "Run",
+    "JUnit.EmployeeManagerTest.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/usuario/IdeaProjects/proyecto_mockito/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\usuario\IdeaProjects\proyecto_mockito\src" />
@@ -70,7 +71,7 @@
       <recent name="org.iesvdm.dominio" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ArgumentMatcherTest.anyArgumentTest">
+  <component name="RunManager" selected="JUnit.EmployeeManagerTest">
     <configuration name="ArgumentMatcherTest.anyAndAdditionalArgumentMatchersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proyecto_mockito" />
       <extension name="coverage">
@@ -103,34 +104,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MockMethodsTest.whenMockMethodCallIsConfiguredToCallTheRealMethod_thenRealMethodIsCalled" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmployeeInMemoryRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proyecto_mockito" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.iesvdm.dominio.*" />
+          <option name="PATTERN" value="org.iesvdm.employee.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.iesvdm.dominio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesvdm.dominio.MockMethodsTest" />
-      <option name="METHOD_NAME" value="whenMockMethodCallIsConfiguredToCallTheRealMethod_thenRealMethodIsCalled" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="org.iesvdm.employee" />
+      <option name="MAIN_CLASS_NAME" value="org.iesvdm.employee.EmployeeInMemoryRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MockVsSpyTest.whenThenReturn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmployeeManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proyecto_mockito" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.iesvdm.dominio.*" />
+          <option name="PATTERN" value="org.iesvdm.employee.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.iesvdm.dominio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesvdm.dominio.MockVsSpyTest" />
-      <option name="METHOD_NAME" value="whenThenReturn" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="org.iesvdm.employee" />
+      <option name="MAIN_CLASS_NAME" value="org.iesvdm.employee.EmployeeManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -153,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EmployeeManagerTest" />
+        <item itemvalue="JUnit.EmployeeInMemoryRepositoryTest" />
         <item itemvalue="JUnit.ArgumentMatcherTest.anyArgumentTest" />
         <item itemvalue="JUnit.ArgumentMatcherTest.anyAndAdditionalArgumentMatchersTest" />
         <item itemvalue="JUnit.VerifyTest.givenInteractionsInOrder_whenVerifyingOrderOfInteractions_thenCorrect" />
-        <item itemvalue="JUnit.MockMethodsTest.whenMockMethodCallIsConfiguredToCallTheRealMethod_thenRealMethodIsCalled" />
-        <item itemvalue="JUnit.MockVsSpyTest.whenThenReturn" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +183,8 @@
       <workItem from="1713177366619" duration="7131000" />
       <workItem from="1713255859967" duration="694000" />
       <workItem from="1714465322350" duration="992000" />
-      <workItem from="1715070674264" duration="2883000" />
+      <workItem from="1715070674264" duration="3543000" />
+      <workItem from="1715156824128" duration="3551000" />
     </task>
     <task id="LOCAL-00001" summary="inicial">
       <option name="closed" value="true" />
@@ -210,7 +210,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712990083710</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Actualizaciones a la teoría de mockito">
+      <option name="closed" value="true" />
+      <created>1715080924245</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715080924245</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
