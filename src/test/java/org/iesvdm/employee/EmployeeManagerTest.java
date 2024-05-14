@@ -190,7 +190,23 @@ public class EmployeeManagerTest {
 	 */
 	@Test
 	public void testExampleOfArgumentCaptor() {
+		Employee employee1 = Mockito.spy(new Employee("1", 1000));
+		Employee employee2 = Mockito.spy(new Employee("2", 2000));
 
+		List<Employee> list = Arrays.asList(employee1, employee2);
+
+		when(employeeRepository.findAll()).thenReturn(list);
+		assertThat(employeeManager.payEmployees()).isEqualTo(2);
+
+		verify(bankService, times(2)).pay(idCaptor.capture(), amountCaptor.capture());
+
+		List<String> ids = idCaptor.getAllValues();
+		List<Double> amounts = amountCaptor.getAllValues();
+
+		assertThat(ids).containsExactly("1", "2");
+		assertThat(amounts).containsExactly(1000.0, 2000.0);
+
+		verifyNoMoreInteractions(bankService);
 	}
 
 	/**
@@ -204,7 +220,17 @@ public class EmployeeManagerTest {
 	 */
 	@Test
 	public void testEmployeeSetPaidIsCalledAfterPaying() {
+		Employee toBePaid = Mockito.spy(new Employee("3", 3000));
 
+		when(employeeRepository.findAll()).thenReturn(Arrays.asList(toBePaid));
+
+		employeeManager.payEmployees();
+
+		InOrder inOrder = inOrder(bankService, toBePaid);
+		inOrder.verify(bankService).pay(eq("3"), anyDouble());
+		inOrder.verify(toBePaid).setPaid(true);
+
+		verifyNoMoreInteractions(bankService);
 	}
 
 
@@ -222,7 +248,16 @@ public class EmployeeManagerTest {
 	 */
 	@Test
 	public void testPayEmployeesWhenBankServiceThrowsException() {
+		Employee notToBePaid = Mockito.spy(new Employee("notToBePaid", 4000));
+		when(employeeRepository.findAll()).thenReturn(Arrays.asList(notToBePaid));
+		doThrow(new RuntimeException()).when(bankService).pay(anyString(), anyDouble());
 
+		assertThat(employeeManager.payEmployees()).isEqualTo(0);
+
+		verify(notToBePaid).setPaid(false);
+		verify(bankService).pay(anyString(), anyDouble());
+
+		verifyNoMoreInteractions(bankService);
 	}
 
 	/**

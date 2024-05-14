@@ -55,7 +55,12 @@ public class EmployeeInMemoryRepositoryTest {
 	 */
 	@Test
 	public void testEmployeeRepositorySaveNewEmployee() {
+		Employee employee1 = new Employee("1", 1000.0d);
+		Employee employee2 = new Employee("2", 2000.0d);
 
+		employeeRepository.save(employee1);
+
+		assertThat(employeeRepository.findAll()).containsExactly(employee1);
 	}
 
 	/**
